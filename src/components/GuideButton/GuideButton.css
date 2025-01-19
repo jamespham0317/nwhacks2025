@@ -1,7 +1,7 @@
 .button {
     width: 200px;
     height: 200px;
-    background-color: #072100;
+    background-color: #779D70;
     border-radius: 5%;
     color: white;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
@@ -10,6 +10,6 @@
 }
 
 .button:hover {
-    background-color: #0a3000; 
+    background-color: #44613f; 
     color: white;
 }

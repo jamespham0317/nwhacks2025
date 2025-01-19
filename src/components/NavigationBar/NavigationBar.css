@@ -1,13 +1,12 @@
 
 .bar {
-    background-color: #072100;
-    color: #fff;
-    position: fixed;
+	position: absolute;
+    background-color: #D2E5D2;
+    color: #28672C;
     top: 0;
     width: 100%;
     height: 75px;
     line-height: 75px;
-    z-index: 1000;
 }
 
 .app-name {

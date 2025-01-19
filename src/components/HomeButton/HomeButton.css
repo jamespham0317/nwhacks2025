@@ -1,0 +1,18 @@
+.home-button {
+	position: absolute;
+	color: #28672C;
+	right: 0;
+	cursor: pointer;
+	text-align: center;
+}
+
+.home-text {
+	margin-top: -5px;
+	color: #28672C;
+}
+
+img {
+	width: 33%;
+	height: 33%;
+	margin-top: 10px;
+}

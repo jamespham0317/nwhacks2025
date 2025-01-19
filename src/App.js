@@ -3,6 +3,7 @@ import NavigationBar from './components/NavigationBar/NavigationBar';
 import DashboardHeader from './components/DashboardHeader/DashboardHeader';
 import NewsBox from './components/NewsBox/NewsBox';
 import GuideButton from './components/GuideButton/GuideButton';
+import HomeButton from './components/HomeButton/HomeButton';
 import RecycleRecognizer from './components/RecycleRecognizer/recycleRecognizer';
 import './App.css';
 
@@ -16,6 +17,10 @@ class App extends Component {
 
   onRecyclingGuideButton = () => {
     this.setState({page: 'recyclingGuide'});
+  }
+
+  onHomeButton = () => {
+    this.setState({page: 'dashboard'});
   }
 
   render() {
@@ -35,6 +40,7 @@ class App extends Component {
       return (
         <div>
           <NavigationBar />
+          <HomeButton onHomeButton={this.onHomeButton}/>
           <RecycleRecognizer />
         </div>
       )

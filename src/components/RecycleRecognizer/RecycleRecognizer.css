@@ -1,10 +1,10 @@
 :root {
-    --check-color: gray;
+    --check-color: #D9D9D9;
 }
 
 .header {
 	margin-top: 100px;
-	color: white;
+	color: #91B682;
 	font-size: 40px;
 	text-align: center;
 }
@@ -15,7 +15,7 @@ input[type="file"] {
 .custom-file-upload, .checkButton, button {
     border-radius: 5px;
     margin:10px;
-    color: white;
+    color: #91B682;
     background-color: var(--check-color);
     border: 1px solid #ccc;
     display: inline-block;
@@ -28,17 +28,34 @@ input[type="file"] {
 .imageInput {
     display: flex;
     justify-content: center;
-    color: white;
+    color: #91B682;
 }
 
-.isRecyclable, .centerTable, .noteList, .listDiv {
+input[type="text"] {
+    border-radius: 15px;
+    padding: 8px;
+    border: 2px solid #ccc;
+    width: 250px;
+    background-color: #D2E5D2;
+    color: #91B682;
+}
+
+.isRecyclable {
+    text-align: center;
+    border-radius: 25px;
+    background: 'clear';
+    padding: 15px;
+    color: #28672C;
+}
+
+.centerTable, .noteList, .listDiv {
     display: flex;
     justify-content: center;
 }
 
 .objectDescription {
     text-align: center;
-    color:white
+    color:#91B682
 }
 
 ul {
@@ -46,7 +63,7 @@ ul {
 }
 
 li {
-    color: white;
+    color: #91B682;
 }
 
 td, th{
@@ -61,12 +78,11 @@ th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
-  color: white;
+  background-color: #D2E5D2;
 }
 
 .yesBox {
-    background-color: #04aa2e;
+    background-color: #2ebc51;
 }
 
 .maybeBox {
