@@ -10,14 +10,13 @@ const containerStyle = {
 };
 
 const wrapperStyle = {
-  width: '50%',
-  height: '500px',
+  width: '95%',
+  height: '65%',
   border: '5px solid #779d70',
   borderRadius: '20px',
   overflow: 'hidden',
   margin: '0 auto',
-  boxShadow: '10px 10px 15px rgba(0, 0, 0, 0.2)'
-
+  boxShadow: '10px 10px 15px rgba(0, 0, 0, 0.2)',
 };
 
 const infoBoxOptions = {
@@ -45,7 +44,7 @@ const vancouver = {
 const Map = () => {
 
   const [selectedMarker, setSelectedMarker] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   const allTags = [...new Set(markersData.flatMap(marker => marker.tags))];
 
@@ -54,7 +53,7 @@ const Map = () => {
   );
 
   return (
-    <div>
+    <div className="map-container">
       <div className="filter">
         <select
           value={selectedCategory}
@@ -68,6 +67,7 @@ const Map = () => {
           ))}
         </select>
       </div>
+      <br></br>
       <div style={wrapperStyle}>
         <LoadScript googleMapsApiKey={APIs.GoogleMaps}>
           <GoogleMap mapContainerStyle={containerStyle} options={mapOptions} center={vancouver} zoom={11}>

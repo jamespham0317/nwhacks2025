@@ -3,7 +3,7 @@ import APIs from '../../APIKEYS'; // REPLACE WITH REAL IMPLEMENTATION
 import $ from 'jquery';
 import './RecycleRecognizer.css'
 
-const getRecycleDetails = (object) => {
+const getRecycleDetails = (object,onHomeButton) => {
   var headers = new Headers()
   headers.append("Content-Type", "application/json")
 
@@ -47,11 +47,21 @@ const getRecycleDetails = (object) => {
         item.innerHTML = notes[note]
         notesList.appendChild(item)
       }
+      var mapLinkDiv = document.getElementById('mapLink')
+      mapLinkDiv.innerHTML = ''
+      if(recyclable !== '0' && recyclable !== ' 0'){
+        var mapLink = document.createElement('a')
+        mapLink.href = ''
+        mapLink.onClick = {onHomeButton}
+        mapLink.className='map-link-text'
+        mapLink.innerHTML='Find a nearby recycling depot'
+        mapLinkDiv.appendChild(mapLink)
+      }
     })
     .catch((error) => console.error(error))
 }
 
-const checkImage = () => {
+const checkImage = (onHomeButton) => {
   if ($('#objectImage')[0].files[0]) {
     var headers = new Headers()
     headers.append("X-Api-Key", APIs.APINinja)
@@ -96,12 +106,12 @@ const checkImage = () => {
         }
         resultDiv.appendChild(submit)
 
-        getRecycleDetails(result[0].label)
+        getRecycleDetails(result[0].label,onHomeButton)
       })
   }
 }
 
-const RecycleRecognizer = () => {  
+const RecycleRecognizer = ({ onHomeButton }) => {  
   return(
     <div className = 'body'>
       <h1 className='header'>Object Recognizer</h1>
@@ -111,7 +121,7 @@ const RecycleRecognizer = () => {
         </label>
         <input id="objectImage" type="file" accept="image/*" capture="camera" onInput={() => {
           document.documentElement.style.setProperty('--check-color', '#D2E5D2')
-          checkImage()
+          checkImage(onHomeButton)
         }}/>
       </div>
       <img id="chosenImage" src="#" alt="" />
@@ -123,6 +133,8 @@ const RecycleRecognizer = () => {
       </div>
       <div className="listDiv">
         <ul id="notesList" className="notesList"></ul>
+      </div>
+      <div id="mapLink" className="mapLink">
       </div>
       <br></br>
       <h1 className='header'>What is the number on my plastic?</h1>

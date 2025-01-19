@@ -44,7 +44,7 @@ class App extends Component {
         <div>
           <NavigationBar />
           <HomeButton onHomeButton={this.onHomeButton}/>
-          <RecycleRecognizer />
+          <RecycleRecognizer onHomeButton={this.onHomeButton}/>
         </div>
       )
     }

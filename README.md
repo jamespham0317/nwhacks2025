@@ -9,22 +9,22 @@ Recycling shouldn't be a mystery or a hassle for anyone. We wanted to make a too
 ## What it does
 
 Our features include:
-- ### Interactive Map
-    - Show nearby recycling depots / providers, differentiated by colors and labels
-    - Includes details about accepted recycling types
-    - Get directions
-- ### Recycling Assistant
-    - Uses machine learning to recognize object from image
-    - Returns helpful information about recycling the object
-    - Input object by text if image processing fails
-    - Extra table for sorting plastics 
-- ### News / Events Feed
-    - Updated daily
-    - Relevant articles
-    - Community events
-- ### (COMING SOON) Community Discussion Board
-    - Planning events like bottle drives, street cleanups
-    - General questions about recycling, local guidelines
+### Interactive Map
+- Show nearby recycling depots / providers, differentiated by colors and labels
+- Includes details about accepted recycling types
+- Get directions
+### Recycling Assistant
+- Uses machine learning to recognize object from image
+- Returns helpful information about recycling the object
+- Input object by text if image processing fails
+- Extra table for sorting plastics 
+### News / Events Feed
+- Updated daily
+- Relevant articles
+- Community events
+### (COMING SOON) Community Discussion Board
+- Planning events like bottle drives, street cleanups
+- General questions about recycling, local guidelines
 
 ## How we built it
 
@@ -43,6 +43,14 @@ As beginners, working on a project as a team under a time crunch is something we
 
 ## What we learned
 
-- 
+- Basic webhosting
+- Collaborative coding
+- Incorporating APIs / LLMs
 
 ## What's next for Recycle Radar
+
+- Mobile web / app support
+
+    ### See [Figma Mockup](https://www.figma.com/proto/zUWv8SN3PDFjgcOSgH2LWa/Recycle-radar?node-id=0-1&t=NROCQjgvXxMya88e-1)
+- Community Forum (As mentioned)
+- Account system for forum, points system for recycling rewards to exchange for coupons with partnering stores

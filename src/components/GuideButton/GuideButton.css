@@ -17,4 +17,5 @@
 .vertical {
     display: grid;
     grid-template-rows: auto auto; 
+    height:500px;
 }

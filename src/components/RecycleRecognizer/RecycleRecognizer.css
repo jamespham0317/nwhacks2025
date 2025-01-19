@@ -96,3 +96,10 @@ th {
 .noBox {
     background-color: rgb(224, 76, 76);
 }
+
+.mapLink {
+	margin-top: 20px;
+	color: #91B682;
+	font-size: 20px;
+	text-align: center;
+}

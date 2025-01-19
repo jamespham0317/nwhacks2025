@@ -12,6 +12,7 @@
 	color: white;
 	float: right;
 	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+	margin-right: 10px;
 }
 
 .articles {
@@ -28,6 +29,13 @@
 .news-img {
 	height: 6%;
 	width: 12%;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+
+.calendar-img {
+	height: 14%;
+	width: 14%;
 	margin-top: 10px;
 	margin-left: 10px;
 }
