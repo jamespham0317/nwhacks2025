@@ -1,0 +1,58 @@
+.header {
+	margin-top: 100px;
+	color: white;
+	font-size: 40px;
+	text-align: center;
+}
+
+.imageInput {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.isRecyclable {
+    display: flex;
+    justify-content: center;
+}
+
+.objectDescription {
+    text-align: center;
+    color:white
+}
+
+.noteList {
+    display: flex;
+    justify-content: center;
+}
+
+.listDiv {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style-position: outside;
+}
+
+li {
+    color: white;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(odd){background-color: #d2d2d2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}

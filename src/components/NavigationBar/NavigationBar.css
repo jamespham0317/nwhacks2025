@@ -1,0 +1,17 @@
+
+.bar {
+    background-color: #072100;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    z-index: 1000;
+}
+
+.app-name {
+    margin: 0;
+    font-size: 24px;
+    margin-left: 20px;
+}

@@ -1,0 +1,16 @@
+.title {
+	color: white;
+	padding-left: 25px;
+	font-size: 20px;
+}
+
+.box {
+	width: 300px;
+	height: 450px;
+	background-color: #072100;
+	border-radius: 5%;
+	color: white;
+	float: right;
+	margin-right: 25px;
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+}
