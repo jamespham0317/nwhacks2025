@@ -103,12 +103,12 @@ const RecycleRecognizer = () => {
       <h1 className='header'>Object Recognizer</h1>
       <div className="imageInput">
         <label htmlFor="objectImage" className="custom-file-upload">
-          <i className="fa fa-cloud-upload"></i> Custom Upload
+          <i className="fa fa-cloud-upload"></i> Select Image
         </label>
         <input id="objectImage" type="file" accept="image/*" capture="camera" onInput={() => {
           document.documentElement.style.setProperty('--check-color', '#D2E5D2')
+          checkImage()
         }}/>
-        <button onClick={checkImage} className="checkButton">Check Image</button>
       </div>
       <img id="chosenImage" src="#" alt="" />
       <br></br>

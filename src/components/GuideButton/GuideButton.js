@@ -4,7 +4,8 @@ import './GuideButton.css';
 const GuideButton = ({ onRecyclingGuideButton }) => {
   return (
     <div>
-      <button className='button' onClick={onRecyclingGuideButton}>Recycling Guide</button>
+      <button className='button' onClick={onRecyclingGuideButton}>Recycling Assistant</button>
+      <button className='button'>Piazza</button>
     </div>
   );
 }

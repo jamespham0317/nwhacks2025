@@ -5,6 +5,7 @@ import NewsBox from './components/NewsBox/NewsBox';
 import GuideButton from './components/GuideButton/GuideButton';
 import HomeButton from './components/HomeButton/HomeButton';
 import RecycleRecognizer from './components/RecycleRecognizer/recycleRecognizer';
+import Map from './components/Map/Map';
 import './App.css';
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
   }
 
   onHomeButton = () => {
+    window.location.reload();
     this.setState({page: 'dashboard'});
   }
 
@@ -32,6 +34,7 @@ class App extends Component {
         <DashboardHeader />
         <div style={{display: 'flex'}}>
           <GuideButton onRecyclingGuideButton={this.onRecyclingGuideButton} />
+          <Map />
           <NewsBox />
         </div>
       </div>

@@ -12,7 +12,7 @@
 input[type="file"] {
     display: none;
 }
-.custom-file-upload, .checkButton, button {
+.custom-file-upload, button {
     border-radius: 5px;
     margin:10px;
     color: #91B682;
