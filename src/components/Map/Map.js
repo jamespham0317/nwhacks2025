@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import APIs from '../../APIKEYS'
-import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker, InfoBox } from '@react-google-maps/api';
 import markersData from './MarkersData';
 import './Map.css';
 
@@ -16,6 +16,18 @@ const wrapperStyle = {
   borderRadius: '20px',
   overflow: 'hidden',
   margin: '0 auto',
+  boxShadow: '10px 10px 15px rgba(0, 0, 0, 0.2)'
+
+};
+
+const infoBoxOptions = {
+  boxStyle: {
+    background: "none",
+    border: "none",
+    boxShadow: "none",
+  },
+  closeBoxURL: "",
+  enableEventPropagation: true, // Allows events to pass through
 };
 
 const mapOptions = {
@@ -33,33 +45,57 @@ const vancouver = {
 const Map = () => {
 
   const [selectedMarker, setSelectedMarker] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const allTags = [...new Set(markersData.flatMap(marker => marker.tags))];
+
+  const filteredMarkers = markersData.filter(marker => 
+    selectedCategory === "All" || marker.tags.includes(selectedCategory)
+  );
 
   return (
-    <div style={wrapperStyle}>
-    <LoadScript googleMapsApiKey={APIs.GoogleMaps}>
-      <GoogleMap mapContainerStyle={containerStyle} options={mapOptions} center={vancouver} zoom={11}>
-        {markersData.map((marker) => (
-            <Marker
-                key={marker.id}
-                position={marker.position}
-                icon = {(marker.type === "london drugs" ? "https://maps.google.com/mapfiles/ms/icons/blue-dot.png" : (marker.type === "return-it" ? "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png" : "https://maps.google.com/mapfiles/ms/icons/red-dot.png"))}
-                onClick={() => setSelectedMarker(marker)}
-            />
-            ))}
-        {selectedMarker && (
-          <InfoWindow
-            position={selectedMarker.position}
-            onCloseClick={() => setSelectedMarker(null)} // Close the InfoWindow
-          >
-            <div className = "info-window">
-              <h4>{selectedMarker.name}</h4>
-              <a href={'https://www.google.com/maps/dir//' + encodeURIComponent(selectedMarker.address)} target="blank">Directions</a>
-              <p>{selectedMarker.description}</p>
-            </div>
-          </InfoWindow>
-        )}
-      </GoogleMap>
-    </LoadScript>
+    <div>
+      <div className="filter">
+        <select
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+        >
+          <option value="All">All</option>
+          {allTags.map((tag, index) => (
+            <option key={index} value={tag}>
+              {tag.charAt(0).toUpperCase() + tag.slice(1)} {/* Capitalize first letter */}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div style={wrapperStyle}>
+        <LoadScript googleMapsApiKey={APIs.GoogleMaps}>
+          <GoogleMap mapContainerStyle={containerStyle} options={mapOptions} center={vancouver} zoom={11}>
+            {filteredMarkers.map((marker) => (
+                <Marker
+                    key={marker.id}
+                    position={marker.position}
+                    icon = {(marker.type === "london drugs" ? "https://maps.google.com/mapfiles/ms/icons/blue-dot.png" : (marker.type === "return-it" ? "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png" : "https://maps.google.com/mapfiles/ms/icons/red-dot.png"))}
+                    onClick={() => setSelectedMarker(marker)}
+                />
+                ))}
+            {selectedMarker && (
+              <InfoBox
+                position={selectedMarker.position}
+                options={infoBoxOptions}
+                onCloseClick={() => setSelectedMarker(null)}
+              >
+                <div className = "info-box">
+                  <button className="info-box-close" onClick={() => setSelectedMarker(null)}>✖</button>
+                  <h3>{selectedMarker.name}</h3>
+                  <a href={'https://www.google.com/maps/dir//' + encodeURIComponent(selectedMarker.address)} target="blank">Directions</a>
+                  <p>{selectedMarker.description}</p>
+                </div>
+              </InfoBox>
+            )}
+          </GoogleMap>
+        </LoadScript>
+      </div>
     </div>
   );
 };

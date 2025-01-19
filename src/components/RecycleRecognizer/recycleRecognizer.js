@@ -65,11 +65,15 @@ const checkImage = () => {
       body: formData
     }
 
+    var resultDiv = document.getElementById("objectDescription")
+    var loadText = document.createElement('p')
+    loadText.innerHTML = 'Loading...'
+    resultDiv.appendChild(loadText)
+
     fetch("https://api.api-ninjas.com/v1/objectdetection", requestOptions)
       .then(response => response.json())
       .then((result) => {
         console.log(result)
-        var resultDiv = document.getElementById("objectDescription")
         resultDiv.innerHTML = ''
 
         var name = document.createElement("p")

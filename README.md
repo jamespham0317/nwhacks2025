@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+<img src="./public/favicon.ico" alt="drawing" width="50" border-radius="30"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Recycle Radar 
 
-## Available Scripts
+## Inspiration
 
-In the project directory, you can run:
+Recycling shouldn't be a mystery or a hassle for anyone. We wanted to make a tool to help with all things recycling - whether it's identifying how to recycle something, or locating a local depot.
 
-### `yarn start`
+## What it does
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Our features include:
+- ### Interactive Map
+    - Show nearby recycling depots / providers, differentiated by colors and labels
+    - Includes details about accepted recycling types
+    - Get directions
+- ### Recycling Assistant
+    - Uses machine learning to recognize object from image
+    - Returns helpful information about recycling the object
+    - Input object by text if image processing fails
+    - Extra table for sorting plastics 
+- ### News / Events Feed
+    - Updated daily
+    - Relevant articles
+    - Community events
+- ### (COMING SOON) Community Discussion Board
+    - Planning events like bottle drives, street cleanups
+    - General questions about recycling, local guidelines
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How we built it
 
-### `yarn test`
+The website was built using **ReactJS**, using VSCode with the Live Share extension for collaboration. We also used Figma for our mobile app mock-up
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Challenges we ran into
 
-### `yarn build`
+As beginners, working on a project as a team under a time crunch is something we didn't have much experience with. Still, the more we worked together the more we got used to collaborating and sharing ideas. By speaking up when we had issues, we were able to come up with solutions as a team.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Accomplishments that we're proud of
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Having a cohesive final product
+- Proud of how we worked as a team
+- Exploring how to use tools that were new to some of us
+- Meaningful idea that tackles a real problem
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## What we learned
 
-### `yarn eject`
+- 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## What's next for Recycle Radar

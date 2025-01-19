@@ -1,6 +1,6 @@
 .title {
 	color: white;
-	padding-left: 25px;
+	padding-left: 10px;
 	font-size: 20px;
 }
 
@@ -13,3 +13,44 @@
 	float: right;
 	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
+
+.articles {
+	color: black;
+	margin-right: 15px;
+	margin-left: 15px;
+	height:150px;
+	border-radius: 5%;
+    background-color: #D2E5D2;
+	cursor: pointer;
+	overflow: auto; 
+}
+
+.news-img {
+	height: 6%;
+	width: 12%;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.article-title {
+	margin-right: 15px;
+	margin-left: 15px;
+	text-decoration: underline;
+}
+
+.see-more {
+	font-size: 75%;
+	margin-top: -10px;
+	float: right;
+	margin-right: 20px;
+	text-decoration: underline;
+}
+
+.publisher {
+	margin-left: 5px;
+}
+
+hr {
+	border: 1px solid white; 
+	width: 75%; 
+  }

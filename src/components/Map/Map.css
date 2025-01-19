@@ -1,8 +1,20 @@
-.info-window {
-    background-color: #42dffe;
-    border: 1px solid #2f0101;
-    border-radius: 10px;
+
+.info-box {
+    background-color: white;
     padding: 10px;
-    font-family: 'Inder', sans-serif;
-    max-width: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    margin: 10px;
+}
+
+.info-box-close {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
 }

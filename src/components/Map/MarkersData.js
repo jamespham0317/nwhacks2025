@@ -7,7 +7,7 @@ const markersData = [
             lng: -123.1150572043907
         },
         address: "8588 Yukon St, Vancouver, BC V5X 2R6",
-        tags: ['paper', 'plastic', 'glass', 'metal', 'electronics', 'appliances_s', 'appliances_l', 'batteries', 'lightbulbs', 'styrofoam', 'beverages'],
+        tags: ['paper', 'plastic', 'glass', 'metal', 'electronics', 'Small Appliances', 'Large Appliances', 'batteries', 'Light Bulbs', 'styrofoam', 'beverages'],
         type: "Other",
         description: "Large recycling facility for wide range of materials"
     },
@@ -19,7 +19,7 @@ const markersData = [
             lng: -123.2366974434652
         },
         address: "3335 Webber Ln, Vancouver, BC V6S 0H3",
-        tags: ['paper', 'plastic', 'electronics', 'appliances_s', 'batteries', 'lightbulbs', 'styrofoam', 'beverages'],
+        tags: ['paper', 'plastic', 'electronics', 'Small Appliances', 'batteries', 'Light Bulbs', 'styrofoam', 'beverages'],
         type: "Other",
         description: "Locally-run recycling depot"
     },
@@ -31,7 +31,7 @@ const markersData = [
             lng: -123.11081130498673
         },
         address: "260 SW Marine Dr, Vancouver, BC V5X 2R5",
-        tags: ['electronics', 'appliances_s', 'appliances_l', 'batteries'],
+        tags: ['electronics', 'Small Appliances', 'Large Appliances', 'batteries'],
         type: "Other",
         description: "Large recycling depot for electronics"
     },
@@ -67,9 +67,9 @@ const markersData = [
             lng: -123.09301988828238
         },
         address: "501 E Broadway, Vancouver, BC V5T 1X5",
-        tags: ['paper', 'containers', 'glass', 'electronics', 'appliances_s', 'batteries', 'lightbulbs', 'beverages'],
+        tags: ['paper', 'containers', 'glass', 'electronics', 'Small Appliances', 'batteries', 'Light Bulbs', 'beverages'],
         type: "return-it",
-        description: ""
+        description: "Chain recycling depot"
     },
     {
         id: 7,
@@ -79,9 +79,9 @@ const markersData = [
             lng: -123.13295291730415
         },
         address: "1253 W 75th Ave, Vancouver, BC V6P 3G3",
-        tags: ['electronics', 'appliances_s', 'beverages'],
+        tags: ['electronics', 'Small Appliances', 'beverages'],
         type: "return-it",
-        description: ""
+        description: "Chain recycling depot"
     },
     {
         id: 8,
@@ -91,9 +91,9 @@ const markersData = [
             lng: -123.0506496317836
         },
         address: "2639 Kingsway, Vancouver, BC V5R 5H4",
-        tags: ['electronics', 'appliances_s', 'beverages'],
+        tags: ['electronics', 'Small Appliances', 'beverages'],
         type: "return-it",
-        description: ""
+        description: "Chain recycling depot"
     },
     {
         id: 9,
@@ -103,9 +103,9 @@ const markersData = [
             lng: -123.10595995005252
         },
         address: "7 East 7th Ave, Vancouver, BC V5T 1M4",
-        tags: ['electronics', 'appliances_s', 'beverages', 'paint'],
+        tags: ['electronics', 'Small Appliances', 'beverages', 'paint'],
         type: "return-it",
-        description: ""
+        description: "Chain recycling depot"
     },
     {
         id: 10,
@@ -127,7 +127,7 @@ const markersData = [
             lng: -123.10549566408531
         },
         address: "34 East 69th Avenue, Vancouver, BC V5X 4K6",
-        tags: ['paper', 'containers', 'glass', 'electronics', 'appliances_s', 'beverages', 'paint'],
+        tags: ['paper', 'containers', 'glass', 'electronics', 'Small Appliances', 'beverages', 'paint'],
         type: "Other",
         description: "Recycling depot for bottles"
     },
@@ -139,7 +139,7 @@ const markersData = [
             lng: -123.08226809499187
         },
         address: "960 Evans Avenue, Vancouver, BC V6A 2L2",
-        tags: ['electronics', 'appliances_l', 'appliances_s', 'batteries', 'beverages', 'paint'],
+        tags: ['electronics', 'Large Appliances', 'Small Appliances', 'batteries', 'beverages', 'paint'],
         type: "Other",
         description: "Recycling depot"
     },

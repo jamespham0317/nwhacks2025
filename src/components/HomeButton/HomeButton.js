@@ -6,7 +6,7 @@ const HomeButton = ({ onHomeButton }) => {
   return (
     <div>
       <span className='home-button' onClick={onHomeButton}>
-        <img alt='icon' src={home} />
+        <img alt='icon' src={home} className='home-img'/>
         <p className='home-text'>Home</p>
       </span>
     </div>
