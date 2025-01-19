@@ -1,8 +1,28 @@
+:root {
+    --check-color: gray;
+}
+
 .header {
 	margin-top: 100px;
 	color: white;
 	font-size: 40px;
 	text-align: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload, .checkButton, button {
+    border-radius: 5px;
+    margin:10px;
+    color: white;
+    background-color: var(--check-color);
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Inder','Verdana','sans-serif';
 }
 
 .imageInput {
@@ -11,7 +31,7 @@
     color: white;
 }
 
-.isRecyclable {
+.isRecyclable, .centerTable, .noteList, .listDiv {
     display: flex;
     justify-content: center;
 }
@@ -19,16 +39,6 @@
 .objectDescription {
     text-align: center;
     color:white
-}
-
-.noteList {
-    display: flex;
-    justify-content: center;
-}
-
-.listDiv {
-    display: flex;
-    justify-content: center;
 }
 
 ul {
@@ -39,15 +49,13 @@ li {
     color: white;
 }
 
-td, th {
-  border: 1px solid #ddd;
+td, th{
   padding: 8px;
+  text-align: center;
 }
 
 tr:nth-child(even){background-color: #f2f2f2;}
 tr:nth-child(odd){background-color: #d2d2d2;}
-
-tr:hover {background-color: #ddd;}
 
 th {
   padding-top: 12px;
@@ -55,4 +63,20 @@ th {
   text-align: left;
   background-color: #04AA6D;
   color: white;
+}
+
+.yesBox {
+    background-color: #04aa2e;
+}
+
+.maybeBox {
+    background-color: #f8dd2c;
+}
+
+.maybeNotBox {
+    background-color: #f18e16;
+}
+
+.noBox {
+    background-color: rgb(224, 76, 76);
 }

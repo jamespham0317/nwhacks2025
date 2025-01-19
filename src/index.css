@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Inder:regular,bold,italic');
+
 body {
   margin: 0;
-  font-family: 'Verdana', sans-serif;
+  font-family: 'Inder','Verdana', sans-serif;
   background-color: #1c362b;
 }
