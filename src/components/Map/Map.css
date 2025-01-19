@@ -1,0 +1,8 @@
+.info-window {
+    background-color: #42dffe;
+    border: 1px solid #2f0101;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Inder', sans-serif;
+    max-width: 200px;
+}

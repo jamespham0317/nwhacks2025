@@ -13,3 +13,8 @@
     background-color: #44613f; 
     color: white;
 }
+
+.vertical {
+    display: grid;
+    grid-template-rows: auto auto; 
+}

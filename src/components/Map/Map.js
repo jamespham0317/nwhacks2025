@@ -2,16 +2,32 @@ import React, { useState } from 'react';
 import APIs from '../../APIKEYS'
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 import markersData from './MarkersData';
+import './Map.css';
 
 const containerStyle = {
-  width: '40%',
+  width: '100%',
+  height: '100%',
+};
+
+const wrapperStyle = {
+  width: '50%',
   height: '500px',
-  margin: 'auto',
+  border: '5px solid #779d70',
+  borderRadius: '20px',
+  overflow: 'hidden',
+  margin: '0 auto',
+};
+
+const mapOptions = {
+  fullscreenControl: false, // Disable fullscreen control
+  streetViewControl: false, // Disable Street View control
+  mapTypeControl: false,    // Disable map type (satellite/terrain) control
+  scaleControl: false,      // Disable scale control
 };
 
 const vancouver = {
     lat: 49.2472,
-    lng: -123.1304,
+    lng: -123.1349,
   };
 
 const Map = () => {
@@ -19,8 +35,9 @@ const Map = () => {
   const [selectedMarker, setSelectedMarker] = useState(null);
 
   return (
+    <div style={wrapperStyle}>
     <LoadScript googleMapsApiKey={APIs.GoogleMaps}>
-      <GoogleMap mapContainerStyle={containerStyle} center={vancouver} zoom={12}>
+      <GoogleMap mapContainerStyle={containerStyle} options={mapOptions} center={vancouver} zoom={11}>
         {markersData.map((marker) => (
             <Marker
                 key={marker.id}
@@ -43,6 +60,7 @@ const Map = () => {
         )}
       </GoogleMap>
     </LoadScript>
+    </div>
   );
 };
 

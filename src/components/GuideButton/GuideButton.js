@@ -3,7 +3,7 @@ import './GuideButton.css';
 
 const GuideButton = ({ onRecyclingGuideButton }) => {
   return (
-    <div>
+    <div className='vertical'>
       <button className='button' onClick={onRecyclingGuideButton}>Recycling Assistant</button>
       <button className='button'>Piazza</button>
     </div>
